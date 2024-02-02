@@ -250,7 +250,7 @@ a.icon:hover i:last-child {
 /* --------- EASTER EGG ---------- */
 /* ------------------------------- */
 #user:hover + .easter-egg {
-    bottom: -80vh;
+    bottom: -75vh;
 }
 #user:hover + .easter-egg + div {
     bottom: -95vh;

@@ -239,4 +239,40 @@ a.icon:hover i:first-child {
 } 
 a.icon:hover i:last-child {
     display: block !important;
-} 
+}
+
+
+/* ------------------------------- */
+/* --------- EASTER EGG ---------- */
+/* ------------------------------- */
+#user:hover + .easter-egg {
+    bottom: 150px;
+}
+#user:hover + .easter-egg + div {
+    bottom: 0;
+}
+.easter-egg {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: -150px;
+    right: 24px;
+    background-image: url('assets/super-mario.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    -moz-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    transition: bottom 2s ease-in;
+}
+.easter-egg + div {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    background-image: url('assets/tube.png');
+    background-size: contain;
+    transition: bottom 2s ease-in;
+}

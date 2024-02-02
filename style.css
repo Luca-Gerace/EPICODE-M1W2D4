@@ -23,7 +23,6 @@ a {
 body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
-    position: fixed;
 }
 
 header {
@@ -32,6 +31,11 @@ header {
     background-color: #fff;
     border-bottom: 1px solid #f0f0f0;
     box-shadow: 0px 12px 16px #f0f0f0;
+    position: fixed;
+}
+
+main {
+    padding-top: 64px;
 }
 
 section, aside {
@@ -246,16 +250,16 @@ a.icon:hover i:last-child {
 /* --------- EASTER EGG ---------- */
 /* ------------------------------- */
 #user:hover + .easter-egg {
-    bottom: 150px;
+    bottom: -80vh;
 }
 #user:hover + .easter-egg + div {
-    bottom: 0;
+    bottom: -95vh;
 }
 .easter-egg {
+    position: absolute;
     width: 100px;
     height: 100px;
-    position: absolute;
-    bottom: -150px;
+    bottom: -120vh;
     right: 24px;
     background-image: url('assets/super-mario.png');
     background-size: contain;
@@ -267,10 +271,10 @@ a.icon:hover i:last-child {
     transition: bottom 2s ease-in;
 }
 .easter-egg + div {
+    position: absolute;
     width: 150px;
     height: 150px;
-    position: absolute;
-    bottom: -150px;
+    bottom: -120vh;
     right: 0;
     background-image: url('assets/tube.png');
     background-size: contain;

@@ -16,7 +16,6 @@ a {
 }
 
 
-/* -------------------------------- */
 /* ------------- TAGS ------------- */
 
 body {
@@ -49,7 +48,11 @@ aside {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
 }
 
 p, span, .bottom-link {
@@ -61,12 +64,36 @@ span {
 }
 
 
-/* -------------------------------- */
 /* ---------- COMPONENTS ---------- */
 
 /* LOGO */
 .logo {
     width: 200px;
+}
+
+/* AVATAR CONTAINER */
+.circle {
+    border-radius: 50%;
+}
+.circle.size-m {
+    width: 40px;
+    height: 40px;
+}
+.circle.size-s {
+    width: 24px;
+    height: 24px;
+}
+
+/* BADGE */
+.badge {
+    background-color: #f2f2f2;
+    border-radius: 24px;
+}
+.badge.size-m {
+    padding: 8px 12px;
+}
+.badge.size-s {
+    padding: 4px 8px;
 }
 
 /* BUTTON */
@@ -81,24 +108,9 @@ span {
     color: #fff;
 }
 
-/* USER IMG CONTAINER */
-#user {
-    display: block;
-    background-image: url('assets/supermario.jpeg');
-    background-position: center;
-    background-size: cover;
-    border: 2px solid red;
-}
-.circle {
-    border-radius: 50%;
-}
-.circle.size-m {
-    width: 40px;
-    height: 40px;
-}
-.circle.size-s {
-    width: 24px;
-    height: 24px;
+/* DIVIDER */
+.divider {
+    border-bottom: 1px solid #ddd;
 }
 
 /* TABS */
@@ -116,65 +128,7 @@ span {
     border-bottom: 1px solid #000;   
 }
 
-/* SINGLE NEWS CONTAINER */  
-.news-img {
-    height: 200px;
-}
-.news-details li:not(:first-child) {
-    list-style: disc;
-    margin-left: 8px;
-    padding-left: 4px;
-}
-li::marker {
-    color: #767676;
-    font-size: 10px;
-}
 
-/* BADGE */
-.badge {
-    background-color: #f2f2f2;
-    border-radius: 24px;
-}
-.badge.size-m {
-    padding: 8px 12px;
-}
-.badge.size-s {
-    padding: 4px 8px;
-}
-
-/* BRAND SECTION */
-.brand p {
-    color: #000;
-    text-align: center;
-    font-size: 18px;
-    padding: 0 16px;
-}
-.brand .bottom-link {
-    text-decoration: underline;
-}
-
-/* DIVIDER */
-.divider {
-    border-bottom: 1px solid #ddd;
-}
-
-/* FOLLOWER SECTION */
-.follower-info strong {
-    font-size: 18px;
-    display: block;
-}
-.follower-info span {
-    font-size: 14px;
-}
-
-/* SAVED NEWS SECTION */
-.link {
-    padding-top: 24px;
-    color: green;
-}
-
-
-/* --------------------------------- */
 /* --------- FLEXBOX RULES --------- */
 
 .flex {
@@ -215,28 +169,57 @@ li::marker {
 }
 
 
-/* -------------------------------- */
-/* HACK ICONS SWITCHING, Waiting JS */
+/* ---------- OTHER CONTENTS ---------- */
 
-.none {
-    display: none;
-}
-a.icon {
+/* USER ICON */
+#user {
     display: block;
-    width: 24px;
-    text-align: center;
+    background-image: url('assets/supermario.jpeg');
+    background-position: center;
+    background-size: cover;
+    border: 2px solid red;
 }
-a.icon:hover i:first-child {
-    display: none;
-} 
-a.icon:hover i:last-child {
+
+/* SINGLE NEWS CONTAINER */  
+.news-details li:not(:first-child) {
+    list-style: disc;
+    margin-left: 8px;
+    padding-left: 4px;
+}
+li::marker {
+    color: #767676;
+    font-size: 10px;
+}
+
+/* BRAND SECTION */
+.brand p {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    padding: 0 16px;
+}
+.brand-link {
+    text-decoration: underline;
+}
+
+/* SAVED NEWS SECTION */
+.link {
+    padding-top: 24px;
+    color: green;
+}
+
+
+/* ----------- EXTRA CSS ----------- */
+
+/* HACK ICONS SWITCHING, Waiting JS */
+a.icon:hover i:first-child, .none {
+    display: none !important;
+}
+a.icon:hover i.none {
     display: block !important;
 }
 
-
-/* ------------------------------- */
-/* --------- EASTER EGG ---------- */
-
+/* EASTER EGG */
 #user:hover + .easter {
     bottom: -75vh;
 }

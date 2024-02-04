@@ -180,7 +180,7 @@ span {
     border: 2px solid red;
 }
 
-/* SINGLE NEWS CONTAINER */  
+/* NEWS DETAILS */  
 .news-details li:not(:first-child) {
     list-style: disc;
     margin-left: 8px;
@@ -202,7 +202,7 @@ li::marker {
     text-decoration: underline;
 }
 
-/* SAVED NEWS SECTION */
+/* SAVED NEWS LINK */
 .link {
     padding-top: 24px;
     color: green;
@@ -212,7 +212,7 @@ li::marker {
 /* ----------- EXTRA CSS ----------- */
 
 /* HACK ICONS SWITCHING, Waiting JS */
-a.icon:hover i:first-child, .none {
+a.icon:hover i, .none {
     display: none !important;
 }
 a.icon:hover i.none {
@@ -237,12 +237,12 @@ a.icon:hover i.none {
     height: 100px;
     right: 24px;
     background-image: url('assets/super-mario.png');
-    transition: bottom 3s ease-in-out;
+    transition: bottom 3s 1s;
 }
 .egg {
     width: 150px;
     height: 150px;
     right: 0;
     background-image: url('assets/tube.png');
-    transition: bottom 2s ease-in;
+    transition: bottom 1s 2s;
 }
